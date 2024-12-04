@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Admin Home Page</title>
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+<body>
+    <nav>
+        <div class="navbar">
+            <!-- <a href=""></a> -->
+            <a href="admlogin" style="color: inherit;"> Logout </a>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="gradient-background">
+
+            {% for i in userreg %}
+    
+            <div class="content-1">
+                <div class="login-section-1">
+                    <img src="../static/img/boy.png" style="height: 50%;" alt="">
+                    <h2>Profile</h2>
+                    <p>username: {{i.name}}</p>
+                    <p>gmail: {{i.email}}</p>
+    
+                </div>
+            </div>
+    
+            {% endfor %}
+    
+            
+            <!-- <div class="content-1">
+                <div class="login-section-1">
+                    <h2>Content 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae odio, debitis eos sunt numquam error ad laboriosam eligendi minus expedita, architecto suscipit repudiandae atque libero quisquam, quo aut possimus nemo!</p>
+                </div>
+            </div>
+            <div class="content-1">
+                <div class="login-section-1">
+                    <h2>Content 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem omnis culpa facilis corporis asperiores corrupti! Laudantium reprehenderit in iste. Tempora, possimus magni. Illo magni excepturi blanditiis laborum facilis nisi!</p>
+                </div>
+            </div>
+            <div class="content-1">
+                <div class="login-section-1">
+                    <h2>Content 4</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, ullam. Alias minima vitae quas id mollitia eius sequi, modi maxime explicabo aperiam libero ratione necessitatibus laudantium, molestias deserunt cupiditate voluptas.</p>
+                </div>
+            </div>
+            <div class="content-1">
+                <div class="login-section-1">
+                    <h2>Content 5</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus accusantium vel qui aperiam fuga corporis quaerat. Dolorem enim, blanditiis exercitationem porro vero dolorum numquam? Omnis dignissimos consectetur ut deleniti quas!</p>
+                </div>
+            </div>
+            <div class="content-1">
+                <div class="login-section-1">
+                    <h2>Content 6</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cupiditate quis deleniti quasi veritatis, modi labore nam fugiat alias voluptatem. Dolorum, sit similique. Quibusdam repellat illum cupiditate ad consequatur corrupti!</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    
+  <div class="split-background">
+    <div class="content">
+      <div class="login-section">
+        <h2>User Login</h2>
+        <form action="../userlogin" method="post">
+            {% csrf_token %}
+            <!-- <input type="text"  placeholder=" Name" name="name"  required> -->
+            <input type="text" pattern = "^[a-zA-Z0-9.]+@gmail\.com$" placeholder=" Email or Username" name="email"  required>
+            <input type="password"pattern = "^[A-Z][a-zA-Z0-9!@#$%^&*_+\-?/]{7,}$" placeholder="Password" name="password" required>
+            <div class="options">
+                <label>
+                    <input type="checkbox">
+                    Remember me
+                    </label>
+                <a href="#">Forgot password?</a>
+            </div>
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="userreg">Register</a></p>
+        <p>Admin  <a href="../admlogin">Login</a></p>
+      </div>
+      <div class="info-section">
+        <div class="img">
+        <img src="../static/img/chart.jpg" alt="">
+        </div>
+        <h2>Check Your Project Progress</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae orci in ligula gravida cursus.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

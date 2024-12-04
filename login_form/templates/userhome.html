@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Admin Home Page</title>
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+<body>
+    <nav>
+        <div class="navbar">
+            <!-- <a href=""></a> -->
+            <a href="userlogin" style="color: inherit;"> Logout </a>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="gradient-background">
+
+            {% for i in userreg %}
+    
+            <div class="content-1">
+                <div class="login-section-1">
+                    <img src="../static/img/boy.png" style="height: 50%;" alt="">
+                    <h2>Profile</h2>
+                    <p>username: {{i.name}}</p>
+                    <p>gmail: {{i.email}}</p>
+    
+                </div>
+            </div>
+    
+            {% endfor %}
+        </div>
+    </div>
+    
+    
+</body>
+</html>
